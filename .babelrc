@@ -1,0 +1,34 @@
+{
+  "env": {
+    "development": {
+      "compact": false
+    }
+  },
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": { "version": 3 },
+        "targets": {
+          "node": "16",
+          "esmodules": "true"
+        }
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic",
+        "targets": {
+          "esmodules": "true"
+        }
+      }
+    ]
+  ],
+  "compact": false,
+  "plugins": [
+    ["@babel/plugin-proposal-object-rest-spread"],
+    ["@babel/plugin-proposal-class-properties"]
+  ]
+}
